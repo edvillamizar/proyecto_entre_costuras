@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap:https://proyecto-entre-costuras.pages.dev/sitemap.xml
+Sitemap: https://proyecto-entre-costuras.pages.dev/sitemap.xml

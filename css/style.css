@@ -186,7 +186,7 @@ body {
       var(--color-overlay),
       var(--color-overlay)
     ),
-    url("../images/hero.webp")
+    url("../images/recepcion_entrada.webp")
     center / cover no-repeat;
 
 
@@ -1025,3 +1025,49 @@ html { scroll-padding-top: 80px; }
 @font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/poppins-latin-700-normal.woff2') format('woff2');}
 @font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/open-sans-latin-400-normal.woff2') format('woff2');}
 @font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/open-sans-latin-600-normal.woff2') format('woff2');}
+
+.hero { background-image:
+  linear-gradient(var(--color-overlay), var(--color-overlay)),
+  url("../images/recepcion_entrada.webp"); }
+
+.about-image img { height: auto; aspect-ratio: 4 / 5; object-fit: cover; max-width: 440px; }
+
+.contact-photo { width: 100%; height: auto; border-radius: var(--radius-md); margin-bottom: 15px; }
+
+.about-container.reverse { flex-direction: row-reverse; }
+
+@media (max-width: 900px) {
+  .about-container.reverse { flex-direction: column; }
+}
+
+#nosotros .about-image img { aspect-ratio: 3 / 2; max-width: 500px; }
+
+/* ===== (páginas legales) ===== */
+.legal { max-width: 800px; margin: 0 auto; padding: 130px 20px 60px; line-height: 1.7; }
+.legal h1 { font-family: var(--font-heading); color: var(--color-primary); font-size: var(--fs-600); margin-bottom: 8px; }
+.legal h2 { font-family: var(--font-heading); color: var(--color-primary); font-size: var(--fs-500); margin: 32px 0 10px; }
+.legal p, .legal li { color: var(--color-text); margin-bottom: 10px; }
+.legal ul { padding-left: 22px; }
+.legal a { color: var(--color-blue); }
+.legal-date { color: var(--color-text-light); font-size: var(--fs-200); }
+.back-link { color: #fff; text-decoration: none; font-weight: var(--font-weight-medium); }
+.back-link:hover { color: var(--color-secondary); }
+
+/* ===== (mapa bajo demanda) ===== */
+.map-placeholder {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 30px;
+  text-align: center;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.map-placeholder p { color: var(--color-text-light); max-width: 380px; font-size: var(--fs-300); }
+button.btn { border: 0; cursor: pointer; font: inherit; font-weight: var(--font-weight-semibold); }
+
+.contact-card { display: flex; flex-direction: column; justify-content: center; }

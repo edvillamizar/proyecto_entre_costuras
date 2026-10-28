@@ -27,3 +27,19 @@ if (toggle && nav) {
 
 window.addEventListener("scroll", handleScroll, { passive: true });
 handleScroll();
+
+const loadMapBtn = document.getElementById("load-map");
+const mapPlaceholder = document.getElementById("map-placeholder");
+
+if (loadMapBtn && mapPlaceholder) {
+  loadMapBtn.addEventListener("click", () => {
+    const iframe = document.createElement("iframe");
+    iframe.title = "Mapa de Entre Costuras en Granada";
+    iframe.src = "https://www.google.com/maps?q=C.%20Mirlo,%201,%20Beiro,%2018014%20Granada&output=embed";
+    iframe.width = "100%";
+    iframe.height = "350";
+    iframe.style.border = "0";
+    iframe.referrerPolicy = "no-referrer-when-downgrade";
+    mapPlaceholder.replaceWith(iframe);
+  });
+}
