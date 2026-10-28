@@ -1071,3 +1071,29 @@ html { scroll-padding-top: 80px; }
 button.btn { border: 0; cursor: pointer; font: inherit; font-weight: var(--font-weight-semibold); }
 
 .contact-card { display: flex; flex-direction: column; justify-content: center; }
+
+.grid { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.about-image img {
+  border-radius: var(--radius-lg);
+  box-shadow: 18px 18px 0 var(--color-secondary), var(--shadow-md);
+  transition: transform var(--transition-normal);
+}
+#nosotros .about-image img {
+  box-shadow: -18px 18px 0 var(--color-secondary), var(--shadow-md);
+}
+.about-image:hover img { transform: translateY(-4px); }
+
+@media (max-width: 900px) {
+  .about-image img,
+  #nosotros .about-image img {
+    box-shadow: 10px 10px 0 var(--color-secondary), var(--shadow-sm);
+  }
+}
